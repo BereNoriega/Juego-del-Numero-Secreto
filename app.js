@@ -18,7 +18,7 @@ function verificarIntento () {
     console.log('intento', intentos);
     
     if (numeroDeUsuario == numeroSecreto) {
-        asignarTextoElemento('p',`¡Acertaste en ${intentos} ${(intentos === 1) ? 'intento' : 'intentos'}!\n El numero secreto es ${numeroSecreto}.`);
+        asignarTextoElemento('p',`¡Acertaste en ${intentos-1} ${(intentos === 1) ? 'intento' : 'intentos'}!\n El numero secreto es ${numeroSecreto}.`);
         document.getElementById('reiniciar').removeAttribute('disabled'); // me va a remover el disabled del boton de nuevo juego desde el html. pnemos reiniciar porque ese es el ID de ese boton en el html.
     } else {
         // el usuario no acerto
@@ -87,3 +87,4 @@ function reiniciarJuego(){
 }
 
 condicionesIniciales();  // la llamo fuera de tdo para que se actualicen los valores y se inicie el juego
+
